@@ -1,6 +1,19 @@
 {
-  "app.title": "Angular Transloco",
-  "app.status": "{{ name }} app is running!",
+  "app.title": "",
+  "app.status": "Striving to capture the present moment for the future memories",
   "app.resource":	"Resources",
-  "app.helptext": "Here are some links to help you get started"
+  "app.helptext": "Here are some links to help you get started",
+  "app": {
+    "products" : {
+      "title": "Products",
+      "portraits": "Portraits",
+      "wedding": "Wedding",
+      "babyshoot": "BabyShoot"
+    },
+    "pricing": {
+      "title": "Pricing",
+      "status": "All-inclusive, affordable pricing plans",
+      "context": "Start with a 15-day free trial. No credit card is required. Subscribe anytime with a 30-day money-back guarantee."
+    }
+  }
 }

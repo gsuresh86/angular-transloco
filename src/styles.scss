@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~ng-zorro-antd/style/index.css";
+@import "~ng-zorro-antd/select/style/index.css";
+
+
+.highlight-card {
+  color: #242121;
+  font-weight: 800;
+  font-size: 18px;
+  border: none;
+  width: auto;
+  min-width: 30%;
+  position: relative;
+  margin: 20px;
+}

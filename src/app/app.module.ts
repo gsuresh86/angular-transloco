@@ -4,13 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module';
-import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { NzSelectModule} from 'ng-zorro-antd/select';
+import {NzDropDownModule} from 'ng-zorro-antd/dropdown';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { registerLocaleData } from '@angular/common';
-import en from '@angular/common/locales/en';
+import {RouterModule} from '@angular/router';
+import {NzIconModule} from 'ng-zorro-antd/icon';
 
-registerLocaleData(en);
 
 @NgModule({
   declarations: [
@@ -20,11 +20,18 @@ registerLocaleData(en);
     BrowserModule,
     HttpClientModule,
     TranslocoRootModule,
-    NgZorroAntdModule,
+    NzSelectModule,
+    NzDropDownModule,
+    NzIconModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
+      { path: '', redirectTo: 'home',  pathMatch: 'full' },
+      { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)},
+      { path: 'pricing', loadChildren: () => import('./pricing/pricing.module').then(m => m.PricingModule)}
+    ])
   ],
-  providers: [{ provide: NZ_I18N, useValue: en_US }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
