@@ -1,0 +1,6 @@
+{
+  "app.title": "Angular Transloco",
+  "app.status": "{{ name }} app is running!",
+  "app.resource":	"Resources",
+  "app.helptext": "Here are some links to help you get started"
+}
